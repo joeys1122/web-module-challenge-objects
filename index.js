@@ -54,15 +54,15 @@ const burger = {
   category: "Lunch", 
   discount: function(string) {
     if (string === "teacher" || string === "student") {
-      return this.price = this.price - (this.price * 0.25);
+      return this.price - (this.price * 0.25);
     } else if (string === "public") {
-      return this.price = this.price - (this.price * 0.10);
+      return this.price - (this.price * 0.10);
     }
   }
 }
 
 
-
+console.log("TASK 2 " + burger.discount("public"));
 ///////////////Reviews (MVP)///////////////////
 const reviews = [
     {name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and wonderful vegan options!"},
@@ -123,8 +123,8 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(array, index) {
+  return `${array[index].name} gave the restaurant a ${array[index].rating} star review, and their feedback was: ${array[index].feedback}`;
 }
 
 
@@ -142,10 +142,10 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(array) {
+  return `${array[array.length - 1].name} gave the restaurant a ${array[array.length - 1].rating} star review, and their feedback was: ${array[array.length - 1].feedback}`
 } 
-
+console.log(getLastReview(reviews));
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
